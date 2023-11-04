@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M - 第一代虚拟主机系统</title>
+    <link rel="shortcut icon" href="http://mpjy.pub/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <center>
+        <a  data-content-id="home">首页</a>
+        <a  data-content-id="site">网站</a>
+        <a  data-content-id="file">文件</a>
+        <a  href="#数据库地址" data-content-id="home">数据库</a>
+        <a  data-content-id="new">进阶</a>
+        <a data-content-id="safe">安全</a>
+        <a data-content-id="back" >备份</a>
+        <a data-content-id="help">帮助</a>
+        <a data-content-id="exit">退出</a>
+        <a style="font-size:15px;" href="http://github.com/mpjy/vms1" target="_blank"  data-content-id="home">开源 by MPJY</a>
+        </center>
+      </div>
+        <div class="content" id="home">
+          <div id="data">
+              <div style="display: inline-flex; align-items: center;">
+                  <img src="https://mpjy.pub/img/checkmark-circle.svg" width="32px" height="32px">
+                  <h3 style="margin-left: 10px;">运行状态</h3>
+              </div>
+              <div id="date" style="background: rgb(250, 250, 250);">
+                  <div>
+                      <h3 style="display: inline-block;">运行状态</h3>
+                      <h3 id="de" style="display: inline-block;">正常</h3>
+                  </div>
+              </div>
+              <br>
+              <div id="date" style="background: rgb(250, 250, 250);">
+                  <div>
+                      <h3 style="display: inline-block;">空间占用</h3>
+                      <h3 id="de" style="display: inline-block;">1K/128M</h3>
+                  </div>
+              </div>
+          </div>
+          <div id="data">
+              <div style="display: inline-flex; align-items: center;">
+                  <img src="https://mpjy.pub/img/terminal.svg" width="32px" height="32px">
+                  <h3 style="margin-left: 10px;">主机信息</h3>
+              </div>
+              <div id="date" style="background: rgb(250, 250, 250);">
+                  <div>
+                      <p style="display: inline-block;">剩余流量:</p>
+                      <p style="display: inline-block;">不限</p><br>
+                      <p style="display: inline-block;">绑定域名数:</p>
+                      <p style="display: inline-block;">2个(最大)</p><br>
+                      <p style="display: inline-block;">最大连接:</p>
+                      <p style="display: inline-block;">不限</p><br>
+                      <p style="display: inline-block;">带宽大小:</p>
+                      <p style="display: inline-block;">10Mb</p><br>
+                      <p style="display: inline-block;">带宽优化:</p>
+                      <p style="display: inline-block;">CN2</p><br>
+                      <p style="display: inline-block;">环境:PHP5.4+mysql5.5</p>
+                  </div>
+              </div>
+          </div>
+          <div id="data">
+              <div style="display: inline-flex; align-items: center;">
+                  <img src="https://mpjy.pub/img/server.svg" width="32px" height="32px">
+                  <h3 style="margin-left: 10px;">文件管理</h3>
+              </div>
+              <center>
+                  <div id="date" style="background: rgb(250, 250, 250);">
+                      <div>
+                          <h3 onclick="file()" style="display: inline-block;">文件管理</h3>
+                      </div>
+                  </div>
+                  <br>
+                  <div id="date" style="background: rgb(250, 250, 250);">
+                      <div>
+                          <h3 onclick="file1()" style="display: inline-block;">数据库管理</h3>
+                      </div>
+                  </div>
+              </center>
+          </div>
+          <img src="https://mpjy.pub/sdgl.png" width="100%">
+          <div id="date">
+            <div class="vertical-line" style="display: inline-flex; align-items: center;">
+              <h3 style="margin-left: 10px;">常用功能</h3>
+            </div><br> 
+            <input onclick="domain1()" class="my-button" value="域名管理">
+            <input onclick="file()" class="my-button" value="文件管理">
+            <input onclick="file1()" class="my-button" value="数据库管理">
+            <input onclick="backup()" class="my-button" value="备份管理">
+            <input onclick="help()" class="my-button" value="面板教程">
+          </div>
+          <img src="https://mpjy.pub/sdgl.png" width="100%">
+          <div id="date">
+            <div class="vertical-line" style="display: inline-flex; align-items: center;">
+              <h3 style="margin-left: 10px;">高级设置</h3>
+            </div><br>
+            <input onclick="domain1()" class="my-button" value="重定向">
+            <input onclick="file()" class="my-button" value="反向代理">              
+            <input onclick="file1()" class="my-button" value="缓存配置">
+            <input onclick="backup()" class="my-button" value="网络限速">
+            <input onclick="help()" class="my-button" value="伪静态">  
+            <input onclick="help()" class="my-button" value="默认首页">
+          </div>
+          <img src="https://mpjy.pub/sdgl.png" width="100%">
+          <div id="date">
+            <div class="vertical-line" style="display: inline-flex; align-items: center;">
+              <h3 style="margin-left: 10px;">安全功能</h3>
+            </div>
+            <br>
+            <input onclick="domain1()" class="my-button" value="认证使用">
+            <input onclick="file()" class="my-button" value="SSL">
+            <input onclick="file1()" class="my-button" value="上传规则">
+            <input onclick="backup()" class="my-button" value="防盗链">
+          </div>             
+          <img src="https://mpjy.pub/sdgl.png" width="100%">
+          <div id="date">
+            <div class="vertical-line" style="display: inline-flex; align-items: center;">
+              <h3 style="margin-left: 10px;">流量统计</h3>
+            </div>
+            <br>
+            <input onclick="domain1()" class="my-button" value="流量图">
+            <input onclick="file()" class="my-button" value="连接分析">
+          </div>
+      </div>
+      <div class="content" id="site">
+      <div id="date">
+        <h2>网站列表</h2>
+        <table>
+          <tr>
+              <th>域名</th>
+              <th>目录</th>
+              <th>操作</th>
+          </tr>
+          <tr>
+              <th>mpjy.pub</th>
+              <th>/site</th>
+              <th><input onclick="help()" class="my-button" value="修改"><input onclick="help()" class="my-button" value="删除"></th>
+          </tr>
+      </table>
+      </div><br>
+      <div id="date">
+      <h2>如何绑定域名？</h2>
+      <p>请转到域名解析设置->添加记录</p>
+      <p>主机记录填写为域名前缀(如果什么都不带，就是@)。</p>
+      <p>记录类型为CNAME。</p>
+      <p>记录值为<地区代号>.server.mpjy.pub。</p>
+      <p>TTL:最小值即可。</p>
+      <p>请求来源:默认。</p>
+      <hr>
+      <h2>以下为对应地区代号和完整域名。</h2>
+      <table>
+        <tr>
+            <th>地区</th>
+            <th>代号</th>
+            <th>完整服务域名</th>
+        </tr>
+        <tr>
+            <th>大连</th>
+            <th>dl</th>
+            <th>dl.server.mpjy.pub</th>
+        </tr>
+        <tr>
+            <th>香港</th>
+            <th>hk</th>
+            <th>hk.server.mpjy.pub</th>
+        </tr>
+        <tr>
+            <th>日本</th>
+            <th>jp</th>
+            <th>jp.server.mpjy.pub</th>
+        </tr>
+        <tr>
+            <th>新加坡</th>
+            <th>xjp</th>
+            <th>xjp.server.mpjy.pub</th>
+        </tr>
+        <tr>
+            <th>张家口</th>
+            <th>zjk</th>
+            <th>zjk.server.mpjy.pub</th>
+        </tr>
+    </table>
+      </div> <br>
+      <div id="date">
+      <h2>添加域名</h2>
+      <input type="text" text="qz" class="my-button" placeholder="域名前缀" style="-webkit-text-fill-color: rgb(251, 255, 0); width: 95%;"><br>
+      <input type="text" text="qz" class="my-button" placeholder="域名路径" style="-webkit-text-fill-color: rgb(251, 255, 0); width: 95%;"><br>
+      <input type="text" text="qz" class="my-button" placeholder="提交"  style="-webkit-text-fill-color: rgb(255, 255, 255); width: 95%;"><br>
+      </div>      
+    </div>
+      <div class="content" id="file">
+        <div id="date">
+            <h1>请自行修改上述代码达到浏览文件的目的。</h1>
+        </div>
+    </div>
+    <div class="content" id="datz">
+Foryou
+    </div>
+      <script src="sidebar.js"></script>
+</body>
+</html>
